@@ -2,17 +2,20 @@
 // image: filename inside /images/products/ (leave null for a placeholder tile).
 // approved: false = description drafted by us, awaiting Ajay's confirmation.
 const CATEGORIES = [
-  { id: "feed", label: "Animal Feed & Grains", icon: "bi-basket3" },
+  { id: "feed", label: "Grains & Animal Feed", icon: "bi-basket3" },
   { id: "oils", label: "Edible Oils", icon: "bi-droplet" },
   { id: "coconut", label: "Coconut Products", icon: "bi-tree" },
   { id: "spices", label: "Spices", icon: "bi-stars" },
   { id: "pulses", label: "Pulses", icon: "bi-circle-fill" },
+  { id: "metals", label: "Non-Ferrous Scrap", icon: "bi-recycle" },
 ];
 
 const PRODUCTS = [
   // ---- Animal feed & grains (descriptions supplied by Ajay, Aug 2022) ----
   { cat: "feed", name: "Wheat", origin: null, approved: true, image: "wheat.jpg",
     desc: "Wheat is an important source of carbohydrates and gluten and the leading source of vegetable protein in human food, with a protein content of about 13%. Available as soft (low gluten) and hard (high gluten) varieties." },
+  { cat: "feed", name: "Rice", origin: null, approved: false, image: null,
+    desc: "Milled rice supplied for food use. Varieties and grades available on request." },
   { cat: "feed", name: "Wheat Flour", origin: null, approved: true, image: "wheat-flour.jpg",
     desc: "Wheat flour made by grinding wheat, supplied in feed grade and food grade. High-gluten flour is used by the animal feed and aqua industry; Chakki Atta and Maida are used for bread, chapati and similar products." },
   { cat: "feed", name: "Yellow Maize (Corn)", origin: "India, Myanmar, Ukraine, Pakistan", approved: true, image: "corn.jpg",
@@ -69,25 +72,25 @@ const PRODUCTS = [
     desc: "Natural fiber from the coconut husk, used in horticulture, matting and industrial applications." },
 
   // ---- Spices (descriptions drafted) ----
-  { cat: "spices", name: "Cassia", origin: null, approved: false, image: "cassia.jpg", desc: "Aromatic bark of the cassia tree, sold as sticks or broken pieces." },
-  { cat: "spices", name: "Cassia Powder", origin: null, approved: false, image: null, desc: "Ground cassia bark for food manufacturing and seasoning." },
-  { cat: "spices", name: "Cloves", origin: null, approved: false, image: "cloves.jpg", desc: "Dried flower buds of the clove tree, a strongly aromatic whole spice." },
-  { cat: "spices", name: "Clove Stem", origin: null, approved: false, image: null, desc: "Dried stems of the clove plant, used for their clove aroma." },
-  { cat: "spices", name: "Clove Powder", origin: null, approved: false, image: null, desc: "Ground cloves for seasoning and food manufacturing." },
-  { cat: "spices", name: "Black Pepper", origin: null, approved: false, image: "black-pepper.jpg", desc: "Whole dried peppercorns, one of the most widely traded spices in the world." },
-  { cat: "spices", name: "Mace", origin: null, approved: false, image: "mace.jpg", desc: "The dried outer covering of the nutmeg seed, with a warm, delicate flavour." },
-  { cat: "spices", name: "Nutmeg", origin: null, approved: false, image: "nutmeg.jpg", desc: "Dried seed of the nutmeg tree, sold whole or ground." },
-  { cat: "spices", name: "Turmeric Slices", origin: null, approved: false, image: "turmeric.jpg", desc: "Dried slices of turmeric root." },
-  { cat: "spices", name: "Turmeric Powder", origin: null, approved: false, image: null, desc: "Ground turmeric root, valued for its colour and flavour." },
-  { cat: "spices", name: "Galangal Slice", origin: null, approved: false, image: "galangal.jpg", desc: "Dried slices of galangal root, common in Southeast Asian cooking." },
-  { cat: "spices", name: "Ginger Slices", origin: null, approved: false, image: "ginger-slices.jpg", desc: "Dried ginger root slices." },
-  { cat: "spices", name: "Ginger Powder", origin: null, approved: false, image: null, desc: "Ground dried ginger for seasoning and food manufacturing." },
-  { cat: "spices", name: "Coriander", origin: null, approved: false, image: "coriander.jpg", desc: "Dried coriander seeds, whole or ground." },
-  { cat: "spices", name: "Cumin", origin: null, approved: false, image: "cumin.jpg", desc: "Dried cumin seeds with a warm, earthy flavour." },
-  { cat: "spices", name: "Black Cumin", origin: null, approved: false, image: null, desc: "Small dark seeds used as a spice and flavouring." },
-  { cat: "spices", name: "Long Pepper", origin: null, approved: false, image: null, desc: "Dried catkins of the long pepper plant, hotter and sweeter than black pepper." },
-  { cat: "spices", name: "Red Chilli", origin: null, approved: false, image: "red-chilli.jpg", desc: "Dried whole red chillies." },
-  { cat: "spices", name: "Red Chilli Powder", origin: null, approved: false, image: null, desc: "Ground dried red chillies." },
+  { cat: "spices", name: "Cassia", origin: null, approved: false, image: null, noImage: true, desc: "Aromatic bark of the cassia tree, sold as sticks or broken pieces." },
+  { cat: "spices", name: "Cassia Powder", origin: null, approved: false, image: null, noImage: true, desc: "Ground cassia bark for food manufacturing and seasoning." },
+  { cat: "spices", name: "Cloves", origin: null, approved: false, image: null, noImage: true, desc: "Dried flower buds of the clove tree, a strongly aromatic whole spice." },
+  { cat: "spices", name: "Clove Stem", origin: null, approved: false, image: null, noImage: true, desc: "Dried stems of the clove plant, used for their clove aroma." },
+  { cat: "spices", name: "Clove Powder", origin: null, approved: false, image: null, noImage: true, desc: "Ground cloves for seasoning and food manufacturing." },
+  { cat: "spices", name: "Black Pepper", origin: null, approved: false, image: null, noImage: true, desc: "Whole dried peppercorns, one of the most widely traded spices in the world." },
+  { cat: "spices", name: "Mace", origin: null, approved: false, image: null, noImage: true, desc: "The dried outer covering of the nutmeg seed, with a warm, delicate flavour." },
+  { cat: "spices", name: "Nutmeg", origin: null, approved: false, image: null, noImage: true, desc: "Dried seed of the nutmeg tree, sold whole or ground." },
+  { cat: "spices", name: "Turmeric Slices", origin: null, approved: false, image: null, noImage: true, desc: "Dried slices of turmeric root." },
+  { cat: "spices", name: "Turmeric Powder", origin: null, approved: false, image: null, noImage: true, desc: "Ground turmeric root, valued for its colour and flavour." },
+  { cat: "spices", name: "Galangal Slice", origin: null, approved: false, image: null, noImage: true, desc: "Dried slices of galangal root, common in Southeast Asian cooking." },
+  { cat: "spices", name: "Ginger Slices", origin: null, approved: false, image: null, noImage: true, desc: "Dried ginger root slices." },
+  { cat: "spices", name: "Ginger Powder", origin: null, approved: false, image: null, noImage: true, desc: "Ground dried ginger for seasoning and food manufacturing." },
+  { cat: "spices", name: "Coriander", origin: null, approved: false, image: null, noImage: true, desc: "Dried coriander seeds, whole or ground." },
+  { cat: "spices", name: "Cumin", origin: null, approved: false, image: null, noImage: true, desc: "Dried cumin seeds with a warm, earthy flavour." },
+  { cat: "spices", name: "Black Cumin", origin: null, approved: false, image: null, noImage: true, desc: "Small dark seeds used as a spice and flavouring." },
+  { cat: "spices", name: "Long Pepper", origin: null, approved: false, image: null, noImage: true, desc: "Dried catkins of the long pepper plant, hotter and sweeter than black pepper." },
+  { cat: "spices", name: "Red Chilli", origin: null, approved: false, image: null, noImage: true, desc: "Dried whole red chillies." },
+  { cat: "spices", name: "Red Chilli Powder", origin: null, approved: false, image: null, noImage: true, desc: "Ground dried red chillies." },
 
   // ---- Pulses (descriptions drafted) ----
   { cat: "pulses", name: "Black Matpe", origin: null, approved: false, image: "black-matpe.jpg", desc: "Black gram (urad), a widely used pulse." },
@@ -95,4 +98,12 @@ const PRODUCTS = [
   { cat: "pulses", name: "Black Eye Bean", origin: null, approved: false, image: null, desc: "Cream-coloured beans with a distinctive black eye." },
   { cat: "pulses", name: "Peanuts", origin: null, approved: false, image: null, desc: "Groundnuts for food processing and oil extraction." },
   { cat: "pulses", name: "Toor", origin: null, approved: false, image: null, desc: "Pigeon pea (toor dal), a staple pulse." },
+
+  // ---- Non-ferrous scrap metals (drafted; grades and specs to be confirmed by Ajay) ----
+  { cat: "metals", name: "Copper Scrap", origin: null, approved: false, image: null, desc: "Recovered copper, valued for its high conductivity and recyclability." },
+  { cat: "metals", name: "Aluminium Scrap", origin: null, approved: false, image: null, desc: "Recovered aluminium from extrusions, sheet and cast sources, supplied for remelting." },
+  { cat: "metals", name: "Brass Scrap", origin: null, approved: false, image: null, desc: "Copper-zinc alloy scrap supplied to foundries and smelters." },
+  { cat: "metals", name: "Zinc Scrap", origin: null, approved: false, image: null, desc: "Recovered zinc for use in galvanizing and alloy production." },
+  { cat: "metals", name: "Lead Scrap", origin: null, approved: false, image: null, desc: "Recovered lead for smelting and battery manufacturing." },
+  { cat: "metals", name: "Stainless Steel Scrap", origin: null, approved: false, image: null, desc: "Alloy scrap containing nickel and chromium, supplied for remelting." },
 ];
