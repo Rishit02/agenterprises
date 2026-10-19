@@ -3,7 +3,6 @@
 // approved: false = description drafted by us, awaiting Ajay's confirmation.
 const CATEGORIES = [
   { id: "feed", label: "Grains & Animal Feed", icon: "bi-basket3" },
-  { id: "oils", label: "Edible Oils", icon: "bi-droplet" },
   { id: "coconut", label: "Coconut Products", icon: "bi-tree" },
   { id: "spices", label: "Spices", icon: "bi-stars" },
   { id: "pulses", label: "Pulses", icon: "bi-circle-fill" },
@@ -42,18 +41,6 @@ const PRODUCTS = [
     desc: "A gluten-free, drought-resistant grain, high in starch, easily digested and rich in amino acids, used as both human and animal food." },
   { cat: "feed", name: "Sorghum", origin: "India", approved: true, image: "sorghum.jpg",
     desc: "A drought-resistant cereal grain of the grass family Poaceae and a major source of grain and stockfeed. Also used as a sweetener and as a gluten-free grain that can be cooked like rice or milled into flour." },
-
-  // ---- Edible oils (text-only per Ajay; descriptions drafted) ----
-  { cat: "oils", name: "Crude Palm Oil", origin: null, approved: false, image: null, noImage: true,
-    desc: "Unrefined vegetable oil extracted from the fruit of the oil palm, used by refiners and food manufacturers." },
-  { cat: "oils", name: "RBD Palm Oil", origin: null, approved: false, image: null, noImage: true,
-    desc: "Refined, bleached and deodorised palm oil, ready for use in cooking and food manufacturing." },
-  { cat: "oils", name: "Sunflower Oil", origin: null, approved: false, image: null, noImage: true,
-    desc: "Edible oil pressed from sunflower seeds, widely used for cooking and food processing." },
-  { cat: "oils", name: "Rapeseed Oil", origin: null, approved: false, image: null, noImage: true,
-    desc: "Edible oil extracted from rapeseed, used in cooking and food manufacturing." },
-  { cat: "oils", name: "Soyabean Oil", origin: null, approved: false, image: null, noImage: true,
-    desc: "Edible oil extracted from soybeans, one of the most widely used vegetable oils worldwide." },
 
   // ---- Coconut products (descriptions drafted; Ajay asked for corrections) ----
   { cat: "coconut", name: "Coconut Milk / Cream", origin: null, approved: false, image: "coconut-milk.jpg",
