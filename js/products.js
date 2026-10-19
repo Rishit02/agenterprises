@@ -14,7 +14,7 @@ const PRODUCTS = [
   // ---- Animal feed & grains (descriptions supplied by Ajay, Aug 2022) ----
   { cat: "feed", name: "Wheat", origin: null, approved: true, image: "wheat.jpg",
     desc: "Wheat is an important source of carbohydrates and gluten and the leading source of vegetable protein in human food, with a protein content of about 13%. Available as soft (low gluten) and hard (high gluten) varieties." },
-  { cat: "feed", name: "Rice", origin: null, approved: false, image: null,
+  { cat: "feed", name: "Rice", origin: "Myanmar, India, Pakistan", approved: false, image: null,
     desc: "Milled rice supplied for food use. Varieties and grades available on request." },
   { cat: "feed", name: "Wheat Flour", origin: null, approved: true, image: "wheat-flour.jpg",
     desc: "Wheat flour made by grinding wheat, supplied in feed grade and food grade. High-gluten flour is used by the animal feed and aqua industry; Chakki Atta and Maida are used for bread, chapati and similar products." },
